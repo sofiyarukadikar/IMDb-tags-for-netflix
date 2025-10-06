@@ -20,6 +20,7 @@
             const res = await fetch(url);
             const data = await res.json();
             if (!data.imdbRating || data.imdbRating === "N/A") return;
+            if (appendBelow.querySelector('.imdb-rating')) return;
 
 
             const rating = document.createElement('div');
